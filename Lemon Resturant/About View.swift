@@ -40,7 +40,7 @@ struct About_View: View {
     }
 }
 
-
 #Preview {
     About_View()
 }
+

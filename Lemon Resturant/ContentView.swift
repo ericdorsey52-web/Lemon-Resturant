@@ -9,14 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "iphone")
-                .font(.system(size:40))
-                .foregroundStyle(.tint)
-            Text("Welcome to the iOS 101")
-                
+        TabView {
+            ReservationForm()
+                .tabItem {
+                    Label("Reservation", systemImage: "calendar")
+                }
+            
+            BillCalculatorView()
+                .tabItem {
+                    Label("Bill Calculator", systemImage: "dollarsign.circle")
+                }
+            
+            About_View()
+                .tabItem {
+                    Label("About", systemImage: "info.circle")
+                }
         }
-        .padding()
     }
 }
 
